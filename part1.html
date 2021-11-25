@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Aviator: Part 1 | Codrops</title>
+	<meta name="description"
+		content="Demo of part 1: The Making of 'The Aviator': Animating a Basic 3D Scene with Three.js" />
+	<meta name="keywords"
+		content="three.js, webgl, tutorial, game, 3d, animation, airplane, web development, javascript" />
+	<meta name="author" content="Karim Maaloul for Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700italic' rel='stylesheet'
+		type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/three.min.js"></script>
+	<script src='js/simplexNoise.js'></script>
+	<script src='js/terrain.js'></script>
+	<script type="text/javascript" src="js/initial.js"></script>
+	<script type="text/javascript" src="js/object.js"></script>
+	<script type="text/javascript" src="js/create.js"></script>
+	<script type="text/javascript" src="js/update.js"></script>
+	<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	<link rel="stylesheet" href="./../library/bootstrap.min.css" />
+</head>
+
+<body>
+	<div class="world" id="world"></div>
+	<iframe src="http://127.0.0.1:5500/index2.html" width="1550px" height="770px" title="Map" class="map"></iframe>
+	<nav class="meta">
+		<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/Interactive3DMallMap/"
+			title="Previous Demo"><span>Previous Demo</span></a>
+		<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=26501"
+			title="Back to the article"><span>Back to the Codrops article</span></a>
+		<a class="demo-link demo-link--current" href="part1.html">Part 1</a>
+		<a class="demo-link" href="part2.html">Part 2</a>
+		<a class="demo-link" href="index.html">Game</a>
+	</nav>
+
+	<audio id="dongco" controls autoplay>
+		<source src="./dong_co.mp3">
+	</audio>
+
+	<audio id="bomno" controls autoplay>
+		<source src="./bom_no.mp3">
+	</audio>
+
+	<script src="./../library/jquery-3.4.1.min.js"></script>
+	<script src="./../library/bootstrap.min.js"></script>
+
+	<script>
+		var loadDongCo = setInterval(function (){
+			document.getElementById('dongco').play()
+			document.getElementById('bomno').muted = true;
+		},500)
+	</script>
+</body>
+
+</html>

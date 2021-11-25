@@ -1,0 +1,14 @@
+.world {
+	position: absolute;
+	width: 1500px;
+	height: 700px;
+	overflow: hidden;
+	/* background: -webkit-linear-gradient(#e4e0ba, #f7d9aa);
+	background: linear-gradient(#e4e0ba, #f7d9aa); */
+	/* border: 1px solid #3b15b8; */
+}
+
+.map{
+	position: fixed;
+	z-index: -1;
+}
