@@ -30,8 +30,7 @@ var scene,
 var airplane;
 var gameStatus = 'playing'
 
-function init(event) {
-    
+function init(event) { 
     document.addEventListener('mousemove', handleMouseMove, false);
     createScene();
     createLights();
@@ -90,5 +89,8 @@ function changeToaDoY(y) {
     }
 }
 
+// window.addEventListener('load', init, false);
 
-window.addEventListener('load', init, false);
+function playGame() {
+    init();
+}

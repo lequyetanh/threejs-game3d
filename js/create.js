@@ -87,12 +87,12 @@ function createEnnemies() {
     scene.add(ennemiesHolder.mesh)
 }
 
-function createParticles(){
-    for (var i=0; i<20; i++){
-      var particle = new Particle();
-      particlesPool.push(particle);
+function createParticles() {
+    for (var i = 0; i < 20; i++) {
+        var particle = new Particle();
+        particlesPool.push(particle);
     }
     particlesHolder = new ParticlesHolder();
     //ennemiesHolder.mesh.position.y = -game.seaRadius;
     scene.add(particlesHolder.mesh)
-  }
+}s

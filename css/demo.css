@@ -146,3 +146,8 @@ body #cdawrap { top: auto; right: auto; bottom: 12px; left: 12px; border: 1px so
 	.partisan__title { margin: 0; }
 	.partisan__title::before { width: 100%; padding: 0 0 0.25em; }
 }
+
+.button{
+	position: absolute;
+	z-index: 100;
+}

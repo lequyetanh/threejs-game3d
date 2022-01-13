@@ -1,6 +1,6 @@
 function loop() {
     updatePlane();
-    ennemiesHolder.spawnEnnemies();
+    // ennemiesHolder.spawnEnnemies();
     // sea.mesh.rotation.z += .005;
     // sky.mesh.rotation.z += .01;
     renderer.render(scene, camera);
@@ -18,4 +18,5 @@ function updatePlane() {
     airplane.mesh.position.y -= 1;
   }
     airplane.propeller.rotation.x += 1;
+    airplane.propeller2.rotation.y += 1;
 }

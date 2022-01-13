@@ -33,21 +33,13 @@
 <body>
 	<div class="world" id="world"></div>
 	<iframe src="http://127.0.0.1:5500/index2.html" width="1550px" height="770px" title="Map" class="map"></iframe>
-	<nav class="meta">
-		<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/Interactive3DMallMap/"
-			title="Previous Demo"><span>Previous Demo</span></a>
-		<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=26501"
-			title="Back to the article"><span>Back to the Codrops article</span></a>
-		<a class="demo-link demo-link--current" href="part1.html">Part 1</a>
-		<a class="demo-link" href="part2.html">Part 2</a>
-		<a class="demo-link" href="index.html">Game</a>
-	</nav>
 
-	<audio id="dongco" controls autoplay>
+	<button onclick="playGame()" class='button'>Play Game</button>
+	<audio id="dongco" autoplay>
 		<source src="./dong_co.mp3">
 	</audio>
 
-	<audio id="bomno" controls autoplay>
+	<audio id="bomno" autoplay>
 		<source src="./bom_no.mp3">
 	</audio>
 
@@ -55,11 +47,10 @@
 	<script src="./../library/bootstrap.min.js"></script>
 
 	<script>
-		var loadDongCo = setInterval(function (){
+		var loadDongCo = setInterval(function () {
 			document.getElementById('dongco').play()
 			document.getElementById('bomno').muted = true;
-		},500)
+		}, 500)
 	</script>
 </body>
-
 </html>

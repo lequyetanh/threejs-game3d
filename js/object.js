@@ -24,7 +24,6 @@ var AirPlane = function () {
     engine.castShadow = true;
     engine.receiveShadow = true;
     this.mesh.add(engine);
-
     // Create Tailplane
 
     var geomTailPlane = new THREE.BoxGeometry(15, 20, 5, 1, 1, 1);
@@ -64,7 +63,7 @@ var AirPlane = function () {
 
     // Blades
 
-    var geomBlade = new THREE.BoxGeometry(1, 100, 20, 1, 1, 1);
+    var geomBlade = new THREE.BoxGeometry(1, 70, 10, 1, 1, 1);
     var matBlade = new THREE.MeshPhongMaterial({
         color: Colors.brownDark,
         shading: THREE.FlatShading
@@ -77,7 +76,35 @@ var AirPlane = function () {
     this.propeller.add(blade);
     this.propeller.position.set(50, 0, 0);
     this.mesh.add(this.propeller);
+
+    // canh duoi
+    var geomPropeller2 = new THREE.BoxGeometry(5, 40, 10, 1, 1, 1);
+    var matPropeller2 = new THREE.MeshPhongMaterial({
+        color: Colors.brown,
+        shading: THREE.FlatShading
+    });
+    this.propeller2 = new THREE.Mesh(geomPropeller2, matPropeller2);
+    this.propeller2.castShadow = true;
+    this.propeller2.receiveShadow = true;
+
+    // Blades
+
+    var geomBlade2 = new THREE.BoxGeometry(170, 1, 20, 1, 1, 1);
+    var matBlade2 = new THREE.MeshPhongMaterial({
+        color: Colors.brownDark,
+        shading: THREE.FlatShading
+    });
+
+    var blade2 = new THREE.Mesh(geomBlade2, matBlade2);
+    blade2.position.set(0, 20, 0);
+    blade2.castShadow = true;
+    blade2.receiveShadow = true;
+    this.propeller2.add(blade2);
+    this.propeller2.position.set(0, 30, 0);
+    this.mesh.add(this.propeller2);
 };
+
+
 
 // tạo đối tượng enemy
 Ennemy = function () {
