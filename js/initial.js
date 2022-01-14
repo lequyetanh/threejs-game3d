@@ -45,21 +45,25 @@ function handleMouseMove(event) {
     var tx;
     var ty;
 
+    // 3
     if (event.clientX >= 750 && event.clientY >= 350) {
         tx = event.clientX - 750;
         ty = -(event.clientY - 350);
     }
 
+    // 2
     if (event.clientX >= 750 && event.clientY < 350) {
         tx = event.clientX - 750;
         ty = 350 - event.clientY;
     }
 
+    // 4
     if (event.clientX < 750 && event.clientY >= 350) {
         tx = -(750 - event.clientX);
         ty = -(event.clientY - 350);
     }
 
+    // 1
     if (event.clientX < 750 && event.clientY < 350) {
         tx = -(750 - event.clientX);
         ty = 350 - event.clientY;

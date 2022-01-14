@@ -3,6 +3,7 @@ var AirPlane = function () {
     this.mesh.name = "airPlane";
 
     // Create the cabin
+    // body
     var geomCockpit = new THREE.BoxGeometry(60, 50, 50, 1, 1, 1);
     var matCockpit = new THREE.MeshPhongMaterial({
         color: Colors.red,
@@ -14,6 +15,7 @@ var AirPlane = function () {
     this.mesh.add(cockpit);
 
     // Create Engine
+    // head
     var geomEngine = new THREE.BoxGeometry(20, 50, 50, 1, 1, 1);
     var matEngine = new THREE.MeshPhongMaterial({
         color: Colors.white,
@@ -24,8 +26,8 @@ var AirPlane = function () {
     engine.castShadow = true;
     engine.receiveShadow = true;
     this.mesh.add(engine);
-    // Create Tailplane
 
+    // Create Tailplane
     var geomTailPlane = new THREE.BoxGeometry(15, 20, 5, 1, 1, 1);
     var matTailPlane = new THREE.MeshPhongMaterial({
         color: Colors.red,
@@ -51,7 +53,6 @@ var AirPlane = function () {
     this.mesh.add(sideWing);
 
     // Propeller
-
     var geomPropeller = new THREE.BoxGeometry(20, 10, 10, 1, 1, 1);
     var matPropeller = new THREE.MeshPhongMaterial({
         color: Colors.brown,
@@ -62,7 +63,6 @@ var AirPlane = function () {
     this.propeller.receiveShadow = true;
 
     // Blades
-
     var geomBlade = new THREE.BoxGeometry(1, 70, 10, 1, 1, 1);
     var matBlade = new THREE.MeshPhongMaterial({
         color: Colors.brownDark,
@@ -88,7 +88,6 @@ var AirPlane = function () {
     this.propeller2.receiveShadow = true;
 
     // Blades
-
     var geomBlade2 = new THREE.BoxGeometry(170, 1, 20, 1, 1, 1);
     var matBlade2 = new THREE.MeshPhongMaterial({
         color: Colors.brownDark,
@@ -123,7 +122,7 @@ Ennemy = function () {
     this.mesh.castShadow = true;
 }
 
-// tập hợp nhưng enemy
+// tập hợp những enemy
 EnnemiesHolder = function () {
     // tạo ra 1 đối tượng 3D
     // khi muốn tạo ra 1 đối tượng gồm nhiều đối tượng thì sẽ sử dụng câu lệnh bên dưới
@@ -148,19 +147,17 @@ EnnemiesHolder.prototype.spawnEnnemies = function () {
         }
         if (Math.abs(ennemy.mesh.position.x - airplane.mesh.position.x) < 7 && Math.abs(ennemy.mesh.position.y - airplane.mesh.position.y) < 7) {
             particlesHolder.spawnParticles(ennemy.mesh.position.clone(), 15, 0xf25346, 3);
-            console.log("fuck")
             document.getElementById('bomno').muted = false;
             document.getElementById('bomno').play()
             document.getElementById('dongco').pause()
             clearInterval(loadDongCo)
             gameStatus = 'gameover'
         }
-
         this.mesh.add(ennemy.mesh);
     }
 }
 
-//       particlesHolder.spawnParticles(ennemy.mesh.position.clone(), 15, Colors.red, 3);
+//particlesHolder.spawnParticles(ennemy.mesh.position.clone(), 15, Colors.red, 3);
 
 Particle = function () {
     // đối tượng tứ giác đều
